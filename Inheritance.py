@@ -30,7 +30,6 @@ class Teacher(Person):
         print("Salary : " + str(self.salary))
 
 
-# ----------------------------Single inheritance --------------------------------------
 class Student(Person):
     def __init__(self, first_name, last_name, age, roll_number, *subjects):
         super().__init__(first_name, last_name, age)  # using super() method , super() refer to the parent class
@@ -54,6 +53,13 @@ class Base1:
         self.str1 = "Base1"
         print(self.str1)
 
+        # PRIVATE MEMBER Variable
+        self.__private_variable = 5  # we can make variable private by using double underscore before variable name
+
+    # PRIVATE MEMBER Function
+    def __privateFunction(self):
+        print("Private member : " + str(self.__private_variable))
+
 
 class Base2:
     def __init__(self):
@@ -66,6 +72,9 @@ class Derived(Base1, Base2):
         self.str3 = "Derived"
         print(self.str3)
         Base1.__init__(self)
+
+        # self.private_variable will raise an error as we are trying to access private member
+
         Base2.__init__(self)
 
 
