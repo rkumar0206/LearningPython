@@ -38,6 +38,28 @@ class Student(Person):
         print("Main subject : " + str(self.subjects[2]))
 
 
+# Multiple inheritance
+
+class Base1:
+    def __init__(self):
+        self.str1 = "Base1"
+        print(self.str1)
+
+
+class Base2:
+    def __init__(self):
+        self.str2 = "Base2"
+        print(self.str2)
+
+
+class Derived(Base1, Base2):
+    def __init__(self):
+        self.str3 = "Derived"
+        print(self.str3)
+        Base1.__init__(self)
+        Base2.__init__(self)
+
+
 # Using class
 t = Test("Rohit", "Kumar", 34)
 t.printPersonDetails()
@@ -49,3 +71,6 @@ print()
 
 student = Student("Sagar", "Singh", 13, 45, "english", "hindi", "maths", "science", "sst")
 student.printStudentDetails()
+print()
+
+derived = Derived()  # making the derived class object
