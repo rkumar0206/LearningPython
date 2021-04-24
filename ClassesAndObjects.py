@@ -27,6 +27,11 @@ class Employee:
                 self.salary) + "\n" + "Employee age : " + str(self.age))
 
 
+# pass statement
+class EmptyClass:
+    pass
+
+
 # Using the classes
 print(FirstClass.a)
 print()
@@ -46,6 +51,7 @@ e2.salary = 4100000
 e2.printEmployeeDetails()
 
 # Deleting the e2 object
-
 del e2
 # e2.printEmployeeDetails() will raise an error
+
+emptyClass = EmptyClass
