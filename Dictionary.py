@@ -1,6 +1,8 @@
 # Dictionary : Dictionaries are used to store data values in key:value pairs.
 # Features : Ordered, changeable, and does not allow duplicates
 
+from dataclasses import dataclass
+
 myDictionary = {
     "name": "Rohit",
     "age": 24,
@@ -177,5 +179,22 @@ myFamily = {
     "child5": child5
 }
 print(myFamily)
+
+print('------------------------------------------------------------------------')
+
+print("=========================== data class to dictionary========================")
+
+
+# ---------------------------- Converting data class instance to dictionary ---------------------
+@dataclass
+class User:
+    name: str
+    age: int
+    isMarried: bool
+
+
+user = User("Rohit Kumar", 22, False)
+
+print(str(user.__dict__))
 
 print('------------------------------------------------------------------------')

@@ -9,12 +9,21 @@ parsed_json = json.loads(temp_json)
 
 # the result is the python dictionary
 print(parsed_json["age"])
+
+# list json
+
+list_json = '{"cars": [{"model": "BMW","mpg": 27.5},{ "model": "Maruti","mpg": 24.1}]}'
+
+parsed_json = json.loads(list_json)
+
+print(parsed_json)
+
 # ---------------------------------------------------------------------------
 
 
 # ------------------- Converting python objects json -----------------
 
-# Converting from python to json
+# Converting from python dictionary to json
 
 # a python dictionary object
 x = {
